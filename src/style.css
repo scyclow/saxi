@@ -1,16 +1,16 @@
 :root {
-  --teal: #75D5CD;
-  --teal-light: #DCF4F2;
-  --teal-dark: #3F9991;
-  --purple: #8E75B6;
-  --purple-light: #E3DCED;
-  --purple-dark: #604987;
-  --red: #DE7272;
+  --teal: #000;
+  --teal-light: #000;
+  --teal-dark: #000;
+  --purple: #000;
+  --purple-light: #000;
+  --purple-dark: #000;
+  --red: #000;
   --panel-width: 260px;
 }
 
 body {
-  font-family: 'Work Sans', sans-serif;
+  font-family: monospace;
   font-size: 14px;
   color: var(--purple);
   background-color: #f6f6f6;
@@ -150,7 +150,7 @@ path {
 
 .section-header {
   margin-bottom: 1rem;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   border-bottom: 1px solid var(--purple-light);
   font-size: 18px;
   font-weight: 900;
@@ -209,7 +209,7 @@ input[type=checkbox]:checked:after {
   background-color: var(--purple);
 }
 
-button, select {
+button, select, input[type="file"]::file-selector-button {
   width: 100%;
   margin-bottom: 0.5rem;
   padding: 0.4rem;
@@ -231,6 +231,8 @@ select:not(:disabled):hover,
 select:focus,
 input[type=number]:hover,
 input[type=number]:focus,
+input[type="file"]::file-selector-button:hover,
+input[type="file"]::file-selector-button:focus,
 input[type=checkbox]:focus {
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.25);
 }
@@ -436,4 +438,10 @@ summary:focus {
 .info-disconnected {
   text-align: center;
   color: var(--red);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+
 }

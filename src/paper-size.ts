@@ -24,7 +24,10 @@ export class PaperSize {
     return this.size.x === Math.max(this.size.x, this.size.y);
   }
 
+
+
   public static standard: {[name: string]: PaperSize} = {
+    "USDollar": new PaperSize({x: 148.45, y: 59.5}),
     "USLetter": new PaperSize(vround(vmul({x: 8.5, y: 11}, 25.4))),
     "USLegal": new PaperSize(vround(vmul({x: 8.5, y: 14}, 25.4))),
     "ArchA": new PaperSize(vround(vmul({x: 9, y: 12}, 25.4))),
